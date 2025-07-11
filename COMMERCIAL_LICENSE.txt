@@ -1,0 +1,57 @@
+COMMERCIAL LICENSE AGREEMENT
+For: KLYZ Assessment System
+
+This software is developed and maintained by ZhonXu.
+
+--------------------------------------------------------------------------------
+ Summary (Non-Legal Overview):
+-  Personal use, learning, and non-commercial experimentation are free under AGPLv3.
+-  Any deployment by organizations (including schools, institutions, or companies) for internal use or production requires a valid commercial license.
+-  Unauthorized commercial use, including internal use by institutions without explicit permission, is strictly prohibited.
+--------------------------------------------------------------------------------
+
+1. DEFINITIONS
+
+1.1 “Software” refers to the KLYZ Assessment System and all related files, documentation, and modules provided within this repository.
+
+1.2 “Personal Use” refers to non-commercial activities such as personal learning, experimentation, academic curiosity, and open-source contributions by individuals not acting on behalf of an organization.
+
+1.3 “Commercial Use” includes any use of the Software by or for:
+   - Educational institutions (primary, secondary, higher education)
+   - School districts, governments, or public departments
+   - Companies, startups, or NGOs
+   - Deployment in production, evaluation, or daily workflows of a non-personal entity
+
+2. LICENSE TERMS
+
+2.1 Personal Use is permitted under the terms of the GNU AGPLv3 license.
+
+2.2 Commercial Use without a valid Commercial License is NOT permitted.
+
+2.3 Commercial users must obtain written permission from the author and may be required to:
+   - Pay a one-time or recurring license fee
+   - Acknowledge the original author in any visible deployment
+   - Refrain from redistributing modified versions without approval
+
+3. LICENSE ACQUISITION
+
+To obtain a valid Commercial License, please contact the author:
+
+Email:Creeper000011901@outlook.com  
+WeChat:Creeper0001  
+Include: organization name, intended usage, deployment scale
+
+4. BREACH & TERMINATION
+
+4.1 Unauthorized use of the Software for commercial purposes constitutes a breach of license.
+
+4.2 The author reserves the right to pursue legal action and claim damages if this agreement is violated.
+
+5. MISCELLANEOUS
+
+5.1 This license is governed by the applicable laws of [Your Jurisdiction].
+
+5.2 All rights not expressly granted are reserved by the author.
+
+--------------------------------------------------------------------------------
+Copyright © 2025 by ZhonXu. All Rights Reserved.
