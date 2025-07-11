@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户数据库管理 - 垦利一中班级量化管理系统</title>
+    <link rel="stylesheet" href="/CSS/db-manager.css">
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>用户数据库管理</h1>
+            </div>
+            <div class="action-section">
+                <button class="btn btn-primary" onclick="showAddUserModal()">添加用户</button>
+                <button class="btn btn-secondary" onclick="refreshUserList()">刷新</button>
+                <button class="btn btn-back" onclick="window.location.href='/'">返回首页</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 用户列表 -->
+            <div class="user-list-container">
+                <table class="user-table" id="userTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>权限</th>
+                            <th>所属学部</th>
+                            <th>认证方式</th>
+                            <th>状态</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- 用户数据将通过JavaScript动态插入 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加/编辑用户模态框 -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">添加用户</h3>
+                <span class="close" onclick="closeUserModal()">&times;</span>
+            </div>
+            <form id="userForm">
+                <input type="hidden" id="userId" value="">
+                
+                <div class="form-group">
+                    <label for="userName">用户名 *</label>
+                    <input type="text" id="userName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userAccess">权限 *</label>
+                    <select id="userAccess" name="access" required onchange="toggleAuthFields()">
+                        <option value="">请选择权限</option>
+                        <option value="user">普通用户</option>
+                        <option value="editadmin">编辑管理员</option>
+                        <option value="root">超级管理员</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="belongGrade">所属学部 *</label>
+                    <input type="number" id="belongGrade" name="belonggrade" required placeholder="例如: 2023">
+                </div>
+                
+                <div class="auth-type-selection">
+                    <p><strong>认证方式 (二选一):</strong></p>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="authType" value="password" onchange="toggleAuthFields()">
+                            密码认证
+                        </label>
+                        <label>
+                            <input type="radio" name="authType" value="2fa" onchange="toggleAuthFields()">
+                            2FA认证
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="passwordGroup" style="display: none;">
+                    <label for="userPassword">密码</label>
+                    <input type="password" id="userPassword" name="pswd" placeholder="最少8位，包含大小写字母">
+                    <small>密码必须至少8位，包含大小写字母</small>
+                </div>
+                
+                <div class="form-group" id="tfaGroup" style="display: none;">
+                    <label for="userTfaKey">2FA密钥</label>
+                    <input type="text" id="userTfaKey" name="twofakey" placeholder="输入2FA密钥">
+                    <small>用于编辑管理员的二次验证</small>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeUserModal()">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 加载提示 -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>正在处理中...</p>
+    </div>
+
+    <script src="/JS/db-manager.js"></script>
+</body>
+</html>

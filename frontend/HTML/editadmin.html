@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>验证码验证 - 编辑管理员</title>
+    <link rel="stylesheet" href="/CSS/editadmin.css">
+    <link rel="stylesheet" href="/CSS/fonts.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左：手机动画 -->
+        <div class="phone">
+            <div class="screen">
+                <div class="code">
+                    <div class="digit">*</div>
+                    <div class="digit">*</div>
+                    <div class="digit">*</div>
+                    <div class="digit">*</div>
+                    <div class="digit">*</div>
+                    <div class="digit">*</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右：验证码输入区域 -->
+        <div class="input-wrapper">
+            <div class="tip">您正在作为<span style="font-weight: bold;">编辑管理员 王树琦</span>登录。<br>请输入Google Auth显示的 6 位验证码：</div>
+            <div class="otp-container">
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+                <input type="text" inputmode="numeric" maxlength="1" pattern="\d*"/>
+            </div>
+            <div>
+                <button class="submit-btn">提交</button>
+                <button class="back-btn" onclick="window.location.href='/'">返回首页</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局毛玻璃 + 加载动画 -->
+    <div class="overlay" id="overlay">
+        <div class="loading">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <script src="/JS/editadmin.js"></script>
+</body>
+</html>

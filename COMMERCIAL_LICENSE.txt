@@ -1,4 +1,4 @@
-COMMERCIAL LICENSE AGREEMENT
+COMMERCIAL LICENSE AGREEMENT v1.0
 For: KLYZ Assessment System
 
 This software is developed and maintained by ZhonXu.
@@ -6,19 +6,19 @@ This software is developed and maintained by ZhonXu.
 --------------------------------------------------------------------------------
  Summary (Non-Legal Overview):
 -  Personal use, learning, and non-commercial experimentation are free under AGPLv3.
--  Any deployment by organizations (including schools, institutions, or companies) for internal use or production requires a valid commercial license.
+-  Any deployment by organizations (including senior high schools, universities, institutions, or companies) for internal use or production requires a valid commercial license.
 -  Unauthorized commercial use, including internal use by institutions without explicit permission, is strictly prohibited.
 --------------------------------------------------------------------------------
 
 1. DEFINITIONS
 
-1.1 “Software” refers to the KLYZ Assessment System and all related files, documentation, and modules provided within this repository.
+1.1 "Software" refers to the KLYZ Assessment System and all related files, documentation, and modules provided within this repository.
 
-1.2 “Personal Use” refers to non-commercial activities such as personal learning, experimentation, academic curiosity, and open-source contributions by individuals not acting on behalf of an organization.
+1.2 "Personal Use" refers to non-commercial activities such as personal learning, experimentation, academic curiosity, and open-source contributions by individuals not acting on behalf of an organization. Personal users claiming individual use while actually deploying for organizational purposes will be considered commercial use.
 
-1.3 “Commercial Use” includes any use of the Software by or for:
-   - Educational institutions (primary, secondary, higher education)
-   - School districts, governments, or public departments
+1.3 "Commercial Use" includes any use of the Software by or for:
+   - Senior high schools (高级中学) and universities
+   - School districts, governments, or public departments  
    - Companies, startups, or NGOs
    - Deployment in production, evaluation, or daily workflows of a non-personal entity
 
@@ -33,13 +33,25 @@ This software is developed and maintained by ZhonXu.
    - Acknowledge the original author in any visible deployment
    - Refrain from redistributing modified versions without approval
 
+2.4 Commercial authorization is limited to internal use within the organization. Redistribution, resale of the Software or its derivatives, and public release without authorization are strictly prohibited.
+
 3. LICENSE ACQUISITION
 
 To obtain a valid Commercial License, please contact the author:
 
-Email:Creeper000011901@outlook.com  
-WeChat:Creeper0001  
+Email: Creeper000011901@outlook.com  
+WeChat: Creeper0001  
 Include: organization name, intended usage, deployment scale
+
+Authorization can be obtained through:
+- Negotiating and reaching an agreement with the developer (ZhonXu)
+- Purchasing a one-time authorization license
+
+3.1 Commercial licenses are valid for the period specified in the license agreement.
+
+3.2 Renewal terms will be negotiated separately upon license expiration.
+
+Note: Contact information may be updated. Please check the repository for the most current contact details.
 
 4. BREACH & TERMINATION
 
@@ -49,9 +61,17 @@ Include: organization name, intended usage, deployment scale
 
 5. MISCELLANEOUS
 
-5.1 This license is governed by the applicable laws of [Your Jurisdiction].
+5.1 This license is governed by the applicable laws of the People's Republic of China.
 
-5.2 All rights not expressly granted are reserved by the author.
+5.2 Disputes arising from this agreement shall be resolved through friendly consultation; if consultation fails, they shall be submitted to the competent court in the jurisdiction where the author resides.
+
+5.3 All rights not expressly granted are reserved by the author.
+
+6. DISCLAIMER
+
+6.1 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+6.2 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 --------------------------------------------------------------------------------
 Copyright © 2025 by ZhonXu. All Rights Reserved.

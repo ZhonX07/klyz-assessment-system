@@ -1,0 +1,502 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 顶部栏样式 */
+.header {
+    background: linear-gradient(135deg, #e74c3c 0%, #8e44ad 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: rgba(255,255,255,0.4);
+    border-color: rgba(255,255,255,0.6);
+}
+
+/* 中间内容区域样式 */
+.main-content {
+    flex: 1;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 4rem 0;
+    color: #666;
+}
+
+.placeholder p {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* 底部栏样式 */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 登录模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+}
+
+.form-group button {
+    width: 100%;
+    padding: 0.8rem;
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 50, 150, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 50, 150, 0.4);
+}
+
+.form-group button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-group button .loader-mini {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+
+.form-group button .loader-mini .mini-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.form-group button .loader-mini .mini-line-wrap {
+    animation: spin 1000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+    box-sizing: border-box;
+    height: 15px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 30px;
+}
+
+.form-group button .loader-mini .mini-line {
+    border: 2px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+
+.form-group button .loader-mini .mini-line-wrap:nth-child(1) { animation-delay: -20ms; }
+.form-group button .loader-mini .mini-line-wrap:nth-child(2) { animation-delay: -40ms; }
+.form-group button .loader-mini .mini-line-wrap:nth-child(3) { animation-delay: -60ms; }
+.form-group button .loader-mini .mini-line-wrap:nth-child(4) { animation-delay: -80ms; }
+.form-group button .loader-mini .mini-line-wrap:nth-child(5) { animation-delay: -100ms; }
+
+.form-group button .loader-mini .mini-line-wrap:nth-child(1) .mini-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 27px;
+    width: 27px;
+    top: 2px;
+}
+.form-group button .loader-mini .mini-line-wrap:nth-child(2) .mini-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 23px;
+    width: 23px;
+    top: 4px;
+}
+.form-group button .loader-mini .mini-line-wrap:nth-child(3) .mini-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 19px;
+    width: 19px;
+    top: 6px;
+}
+.form-group button .loader-mini .mini-line-wrap:nth-child(4) .mini-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 15px;
+    width: 15px;
+    top: 8px;
+}
+.form-group button .loader-mini .mini-line-wrap:nth-child(5) .mini-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 11px;
+    width: 11px;
+    top: 10px;
+}
+
+.form-group button.loading .loader-mini {
+    display: block;
+}
+
+.form-group button.loading .button-text {
+    opacity: 0;
+}
+
+@keyframes spin-mini {
+    0%, 15% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loader动画样式 */
+.loader {
+    background: #000;
+    background: radial-gradient(#222, #000);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.loader-inner {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+
+.loader-line-wrap {
+    animation: spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+}
+.loader-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+.loader-line-wrap:nth-child(1) .loader-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+}
+
+@keyframes spin {
+    0%, 15% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 演示表格样式 */
+.demo-section {
+    margin-top: 2rem;
+}
+
+.demo-alert {
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.demo-alert h3 {
+    color: #1565c0;
+    margin-bottom: 0.5rem;
+}
+
+.demo-alert p {
+    color: #555;
+    margin: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+}
+
+.demo-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.demo-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.demo-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.demo-table tr:hover {
+    background-color: #f0f8ff;
+}
+
+.score.negative {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.score.positive {
+    color: #388e3c;
+    font-weight: bold;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo-section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+    }
+    
+    .demo-table {
+        font-size: 0.85rem;
+    }
+    
+    .demo-table th,
+    .demo-table td {
+        padding: 0.6rem 0.4rem;
+    }
+}

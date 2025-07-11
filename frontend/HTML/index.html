@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垦利一中班级量化管理系统</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/fonts.css">
+    <style>
+        body{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>垦利一中 班级量化管理系统（Beta）</h1>
+            </div>
+            <div class="login-section">
+                <button class="login-btn" onclick="openLoginModal()">登录</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 中间内容区域 -->
+    <main class="main-content">
+        <div class="content-container">
+            <div class="demo-section">
+                <div class="demo-alert">
+                    <h3>📋 系统功能预览</h3>
+                    <p>以下是班级量化管理系统的数据示例，展示违纪记录的管理方式,仅供参考。</p>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="demo-table">
+                        <thead>
+                            <tr>
+                                <th>班级</th>
+                                <th>班主任</th>
+                                <th>违纪类型</th>
+                                <th>违纪情况</th>
+                                <th>分数</th>
+                                <th>时间</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023.1</td>
+                                <td>王振宽</td>
+                                <td>宿舍</td>
+                                <td>401宿舍内务不整</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>阳台门西侧上铺没叠被子</td>
+                            </tr>
+                            <tr>
+                                <td>2023.2</td>
+                                <td>郭宝伟</td>
+                                <td>宿舍</td>
+                                <td>407宿舍内务不整</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>宿舍门西侧下铺床上放东西</td>
+                            </tr>
+                            <tr>
+                                <td>2023.16</td>
+                                <td>刘世斌</td>
+                                <td>宿舍</td>
+                                <td>xxx宿舍内务不整</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>没拖地</td>
+                            </tr>
+                            <tr>
+                                <td>2023.21</td>
+                                <td>王树琦</td>
+                                <td>宿舍</td>
+                                <td>318宿舍内务不整</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>洗手池脏</td>
+                            </tr>
+                            <tr>
+                                <td>2023.22</td>
+                                <td>袁义国</td>
+                                <td>宿舍</td>
+                                <td>517宿舍学生打架</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>2023.24</td>
+                                <td>王思程</td>
+                                <td>班级</td>
+                                <td>学生自习课睡觉</td>
+                                <td class="score negative">-1</td>
+                                <td>10:00</td>
+                                <td>无</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部栏 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 ZhonXu 版权所有，授权给 山东省垦利第一中学 2023学部 使用。</p>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>用户登录</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <button type="submit">
+                        <span class="button-text">登录</span>
+                        <div class="loader-mini">
+                            <div class="mini-inner">
+                                <div class="mini-line-wrap"><div class="mini-line"></div></div>
+                                <div class="mini-line-wrap"><div class="mini-line"></div></div>
+                                <div class="mini-line-wrap"><div class="mini-line"></div></div>
+                                <div class="mini-line-wrap"><div class="mini-line"></div></div>
+                                <div class="mini-line-wrap"><div class="mini-line"></div></div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div class="loader" id="loader" style="display:none;">
+        <div class="loader-inner">
+            <div class="loader-line-wrap"><div class="loader-line"></div></div>
+            <div class="loader-line-wrap"><div class="loader-line"></div></div>
+            <div class="loader-line-wrap"><div class="loader-line"></div></div>
+            <div class="loader-line-wrap"><div class="loader-line"></div></div>
+            <div class="loader-line-wrap"><div class="loader-line"></div></div>
+        </div>
+    </div>
+
+    <script src="/JS/main.js"></script>
+</body>
+</html>

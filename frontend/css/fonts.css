@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Sarasa';
+  src: url('/fonts/SarasaUiSC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Sarasa', sans-serif;
+}
