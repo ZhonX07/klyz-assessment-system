@@ -17,7 +17,7 @@ This software is developed and maintained by ZhonXu.
 1.2 "Personal Use" refers to non-commercial activities such as personal learning, experimentation, academic curiosity, and open-source contributions by individuals not acting on behalf of an organization. Personal users claiming individual use while actually deploying for organizational purposes will be considered commercial use.
 
 1.3 "Commercial Use" includes any use of the Software by or for:
-   - Senior high schools (高级中学) and universities
+   - Senior high schools and universities
    - School districts, governments, or public departments  
    - Companies, startups, or NGOs
    - Deployment in production, evaluation, or daily workflows of a non-personal entity
